@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
                         <Project name='Chess 3D' 
                             demo 
                             description={chessDescription} 
-                            imgUrl='/chess3D.png' 
+                            imgUrl='/Chess3D.png' 
                             demoUrl="https://chess3dloop.netlify.app/" 
                             refProject={projectRef} 
                             id='chess'
