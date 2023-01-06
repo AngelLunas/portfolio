@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Head from 'next/head'
 import dynamic from "next/dynamic";
-import { ProjectData } from "./typescript/ProjectData";
+import { ProjectData } from "../../TypeScript/ProjectData";
 import { useRouter } from "next/router";
 import Footer from "../../Components/Footer";
 const Header = dynamic(() => import('../../Components/Header'), {ssr: false});

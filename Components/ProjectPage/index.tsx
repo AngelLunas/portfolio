@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { ProjectData } from "../../pages/proyecto/typescript/ProjectData";
+import { ProjectData } from "../../TypeScript/ProjectData";
 import styles from '../../styles/ProjectPage.module.css';
 
 const ProjectPage: React.FC<{projectData: ProjectData | null | undefined}> = ({projectData}) => {
