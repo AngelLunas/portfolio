@@ -1,0 +1,72 @@
+.containerAbout {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.aboutTitle {
+    color: #273B49;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about {
+    color: #687782;
+    font-family: 'Manrope', sans-serif;
+    line-height: 180%;
+    letter-spacing: 0.04em;
+    text-align: justify;
+    margin: 0;
+}
+
+.textAbout {
+    width: 50%;
+}
+
+.containerTitle {
+    width: 100%;
+    display: flex;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+
+.containerSkills {
+    margin-top: 4%;
+}
+
+.titleSkills {
+    color: #0b0f11;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.imgsSkills {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 770px) {
+    .textAbout {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .imgsSkills {
+        height: 165px;
+    }
+
+    .textAbout {
+        width: 80%;
+    }
+}

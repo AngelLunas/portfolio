@@ -1,0 +1,143 @@
+.footer {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #ECF0F3;
+}
+
+.containerFooter {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.3em;
+    color: #687782;
+}
+
+.navFooter {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.containerNav {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.text {
+    color: #8E9BA4;
+    font-size: 1em;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.media {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+}
+
+.dataContact {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-top: 3%;
+}
+
+.rowsContainerContact {
+    display: flex;
+    flex-direction: column;
+}
+
+.rowContact {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.contactText {
+    color: #273B49;
+    font-size: 1.1em;
+    font-family: 'Manrope', sans-serif;
+}
+
+.dataText {
+    color: #8E9BA4;
+    font-family: 'Manrope', sans-serif;
+    margin-left: 2px;
+    word-break: break-all;
+}
+
+.link {
+    margin: 0 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        height: 55vh;
+    }
+
+    .navFooter {
+        flex-direction: column;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .containerNav {
+        width: 100%;
+        margin: auto;
+    }
+
+    .column {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .media {
+        justify-content: center;
+    }
+
+    .dataContact {
+        width: 100%;
+    }
+
+    .contactText {
+        text-align: center;
+    }
+
+    .rowContact {
+        justify-content: center;
+    }
+}

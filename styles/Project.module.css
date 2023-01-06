@@ -1,0 +1,127 @@
+.containerProject {
+    width: 70vw;
+    margin-right: 15px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.containerDescription {
+    display: flex;
+    width: 42%;
+    margin-right: 3%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerButtons {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    flex-direction: row;
+}
+
+.containerImg {
+    width: 55%;
+    height: 100%;
+    z-index: 2;
+}
+
+.titleProject {
+    color: #273B49;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.descriptionProject {
+    color: #687782;
+    font-family: 'Manrope', sans-serif;
+    font-size: .9em;
+}
+
+.btnDemo {
+    background: #6752ED;
+    border-radius: 4px;
+    color: white;
+    font-size: .9em;
+    font-family: 'Manrope', sans-serif;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.linkDemo {
+    height: 100%;
+    width: 45%;
+}
+
+.btnSite {
+    width: 45%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.redSite {
+    color: #6752ED;
+    font-size: 1em;
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.closeIcon {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    top: 1.8%;
+    left: 96.5%;
+    cursor: pointer;
+}
+
+.imgClose {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.player {
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+@media screen and (max-width: 950px) {
+    .containerProject {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .containerProject {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .containerDescription {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    .containerImg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .containerButtons {
+        height: 35px;
+    }
+}

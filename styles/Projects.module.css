@@ -1,0 +1,54 @@
+.containerProjects {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: #273B49;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.containerCarousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.containerIcon {
+    cursor: pointer;
+}
+
+.carouselProjects {
+    width: 70vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: inline-flex;
+}
+
+@media screen and (max-width: 950px) {
+    .carouselProjects {
+        width: 80vw;
+    }
+
+    .containerCarousel {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .iconBtn {
+        width: 30px;
+        height: 30px;
+    }
+}
