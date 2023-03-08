@@ -59,6 +59,34 @@ const projectsData: Array<ProjectData> = [
         demo: null, 
         repoFront: null, 
         repoBack: null
+    },
+    {
+        id: 'movies',
+        name: 'Movies carousel',
+        description: 'Website que consiste de dos carruseles, donde se pueden visualizar información acerca de las peliculas y filtrar a partir de su fecha de lanzamiento, este website ha sido desarrollado con React, se adapta perfectamente a dispositivos móviles',
+        videoUrl: 'https://www.youtube.com/embed/83R6EYKAq9Y',
+        technologies: [
+            'React',
+            'Html',
+            'Css'
+        ],
+        demo: 'https://movies-carousel.vercel.app/',
+        repoFront: 'https://github.com/AngelLunas/movies-carousel',
+        repoBack: null
+    },
+    {
+        id: 'ecommerce',
+        name: 'Fast buy ecommerce',
+        description: 'Este website fue desarrollado con Next js, como parte de una prueba técnica, posee un carrusel con productos que se puede dividir por categorías, un carrito con resumen de orden donde se puede realizar la compra y un panel para visualizar mis pedidos y su estado. Para los administradores existe una sección donde se pueden ver todas las ordenes y cambiar su estado. Se adapta a todos los dispositivos.',
+        videoUrl: 'https://www.youtube.com/embed/r7s3kYBDGqg',
+        technologies: [
+            'React',
+            'Next js',
+            'MongoDB'
+        ],
+        demo: 'https://ecommerce-fast.vercel.app/',
+        repoFront: 'https://github.com/AngelLunas/ecommerce-fast',
+        repoBack: null
     }
 ];
 

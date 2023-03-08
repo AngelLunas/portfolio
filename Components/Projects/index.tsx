@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Project from "../Project";
 import { gsap } from "gsap";
-import { animationBtns, chessDescription, cricketDescription, slidesDescription, onClickNext, onClickPrev } from "./hooks";
+import { animationBtns, chessDescription, cricketDescription, slidesDescription, onClickNext, onClickPrev, moviesDescription, ecommerceDescription } from "./hooks";
 import styles from '../../styles/Projects.module.css';
 import { DataContext } from "../Context";
 
@@ -64,6 +64,20 @@ const Projects: React.FC = () => {
                             description={cricketDescription} 
                             imgUrl='/cricket.png' 
                             id='cricket'
+                        />
+                        <Project name='Movies carousel'
+                            demo
+                            demoUrl="https://movies-carousel.vercel.app/"
+                            description={moviesDescription}
+                            imgUrl="/movies.png"
+                            id='movies'
+                        />
+                        <Project name='Fast buy ecommerce'
+                            demo
+                            demoUrl="https://ecommerce-fast.vercel.app/"
+                            description={ecommerceDescription}
+                            imgUrl="/ecommerce.png"
+                            id='ecommerce'
                         />
                     </div>
                 </div>

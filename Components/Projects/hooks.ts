@@ -12,6 +12,12 @@ const cricketDescription =
 seguida de otra. Los datos para animar la trayectoría son interpretados a partir de un archivo json. El sitio lo desarrollé con Three Js para el escenario 3D, Webpack como empaquetador y las animaciones de la cámara
 están desarrolladas con gsap.`;
 
+const moviesDescription =
+`Website que consiste de dos carruseles, donde se pueden visualizar información acerca de las peliculas y filtrar a partir de su fecha de lanzamiento, este website ha sido desarrollado con
+React, se adapta perfectamente a dispositivos móviles`;
+
+const ecommerceDescription = 
+`Este website fue desarrollado con Next js, como parte de una prueba técnica, posee un carrusel con productos que se puede dividir por categorías, un carrito con resumen de orden donde se puede realizar la compra y un panel para visualizar mis pedidos y su estado. Para los administradores existe una sección donde se pueden ver todas las ordenes y cambiar su estado. Se adapta a todos los dispositivos.`;
 
 function animationBtns (onBtns: {
     left: boolean;
@@ -88,6 +94,8 @@ export {
     chessDescription, 
     slidesDescription, 
     cricketDescription,
+    moviesDescription,
+    ecommerceDescription,
     onClickNext,
     onClickPrev,
     animationBtns
