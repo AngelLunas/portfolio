@@ -57,7 +57,7 @@ projectActive: number,
 projectWidth: number | undefined, 
 setProjectActive: React.Dispatch<React.SetStateAction<number>>, 
 setBLock: React.Dispatch<React.SetStateAction<boolean>>) {
-   if (projectActive !== 3 && projectWidth !== undefined) {
+   if (projectActive !== 5 && projectWidth !== undefined) {
     setBLock(true);
     setTimeout(() => {
         setBLock(false);
