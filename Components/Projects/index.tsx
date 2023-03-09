@@ -83,7 +83,7 @@ const Projects: React.FC = () => {
                 </div>
                 <div className={styles.containerIcon} 
                     onClick={() => block === false ? onClickNext(carouselRef, projectActive, projectRef.current?.clientWidth, setProjectActive, setBlock) : null}
-                    style={projectActive === 3 ? {cursor: 'not-allowed'} : {cursor: 'pointer'}}
+                    style={projectActive === 5 ? {cursor: 'not-allowed'} : {cursor: 'pointer'}}
                 >
                     <Image src='/rightIcon.svg' 
                         alt='left icon' 
