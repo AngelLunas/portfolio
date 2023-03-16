@@ -4,8 +4,9 @@ import { useRouter } from "next/router";
 import styles from '../../styles/Footer.module.css';
 import { DataContext } from "../Context";
 import { handleRedirect } from "../Header/hooks";
+import { footerType } from "../../lang/dataLang";
 
-const Footer: React.FC<{redirect: boolean}> = ({redirect}) => {
+const Footer: React.FC<{redirect: boolean, footerData: footerType}> = ({redirect, footerData}) => {
     const dataContext = useContext(DataContext);
     const router = useRouter();
 
@@ -19,18 +20,18 @@ const Footer: React.FC<{redirect: boolean}> = ({redirect}) => {
                     <div className={styles.containerNav}>
                         <div className={styles.column}>
                             <span className={styles.text} onClick={() => handleRedirect('home', redirect, dataContext, router)}>
-                                Inicio
+                                { footerData.inicio }
                             </span>
                             <span className={styles.text} onClick={() => handleRedirect('about', redirect, dataContext, router)}>
-                                Acerca de mí
+                                { footerData.acerca }
                             </span>
                         </div>
                         <div className={styles.column}>
                             <span className={styles.text} onClick={() => handleRedirect('projects', redirect, dataContext, router)}>
-                                Proyectos
+                                { footerData.proyectos }
                             </span>
                             <span className={styles.text} onClick={() => handleRedirect('contact', redirect, dataContext, router)}>
-                                Contacto
+                                { footerData.contacto }
                             </span>
                         </div>
                     </div>
@@ -49,7 +50,7 @@ const Footer: React.FC<{redirect: boolean}> = ({redirect}) => {
                     </div>
                     <div className={styles.dataContact}>
                         <span className={styles.contactText}>
-                            Contáctame en:
+                            { footerData.title }
                         </span>
                         <div className={styles.rowsContainerContact}>
                             <div className={styles.rowContact}>

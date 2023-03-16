@@ -1,7 +1,9 @@
 import { contextInterface } from "../../Context/typescript/context";
 import { NextRouter } from "next/router";
 import { motion, animate } from "framer-motion";
+import Image from "next/image";
 import MenuToggle from "../../ButtonToggle";
+import { head } from "../../../lang/dataLang";
 
 const containerNav = {
     initial: {
@@ -83,7 +85,8 @@ redirect: boolean,
 refsContext: contextInterface, 
 router: NextRouter,
 toggleOpen: () => void,
-isOpen: boolean
+isOpen: boolean,
+headerData: head
 ) {
     if (headerActive === 'desktop') {
         return (
@@ -94,17 +97,17 @@ isOpen: boolean
                     <div ref={containerSections} className={styles.containerSections}>
                         <div ref={homeSection} className={styles.sections} onClick={() => handleRedirect('home', redirect, refsContext, router)}>
                             <span className={styles.text}>
-                                Inicio
+                                { headerData.inicio }
                             </span>
                         </div>
                         <div ref={aboutSection} className={styles.sections} onClick={() => handleRedirect('about', redirect, refsContext, router)}>
                             <span className={styles.text}>
-                                Acerca de mí
+                                { headerData.acerca }
                             </span>
                         </div>
                         <div ref={projectsSection} className={styles.sections} onClick={() => handleRedirect('projects', redirect, refsContext, router)}>
                             <span className={styles.text}>
-                                Proyectos
+                                { headerData.proyectos }
                             </span>
                         </div>
                     </div>
@@ -113,7 +116,7 @@ isOpen: boolean
                     <button className={styles.buttonContact} onClick={() => handleRedirect('contact', redirect, refsContext, router)}>
                         <div className={styles.shadowButton}>
                             <span className={styles.textContact}>
-                                Contacto
+                                { headerData.contacto }
                             </span>
                         </div>
                     </button>
@@ -136,16 +139,16 @@ isOpen: boolean
                     </motion.span>
                     <div className={styles.columnNav}>
                         <motion.span className={styles.textMobile} variants={menuTexts} onClick={() => {toggleOpen(); handleRedirect('home', redirect, refsContext, router)}}>
-                            Inicio
+                            { headerData.inicio }
                         </motion.span>
                         <motion.span className={styles.textMobile} variants={menuTexts} onClick={() => {toggleOpen(); handleRedirect('about', redirect, refsContext, router)}}>
-                            Acerca de mí
+                            { headerData.acerca }
                         </motion.span>
                         <motion.span className={styles.textMobile} variants={menuTexts} onClick={() => {toggleOpen(); handleRedirect('projects', redirect, refsContext, router)}}>
-                            Proyectos
+                            { headerData.proyectos }
                         </motion.span>
                         <motion.button className={styles.btnContactNav} variants={menuTexts} onClick={() => {toggleOpen(); handleRedirect('contact', redirect, refsContext, router)}}>
-                            Contacto
+                            { headerData.contacto }
                         </motion.button>
                     </div>
                 </motion.div>

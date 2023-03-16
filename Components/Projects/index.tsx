@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Project from "../Project";
 import { gsap } from "gsap";
-import { animationBtns, chessDescription, cricketDescription, slidesDescription, onClickNext, onClickPrev, moviesDescription, ecommerceDescription } from "./hooks";
+import { animationBtns, onClickNext, onClickPrev } from "./hooks";
 import styles from '../../styles/Projects.module.css';
 import { DataContext } from "../Context";
+import { projectType } from "../../lang/dataLang";
 
-const Projects: React.FC = () => {
+const Projects: React.FC<{projectsData: projectType}> = ({ projectsData }) => {
     const [onBtns, setOnBtns] = useState({left: false, right: false});
     const [projectActive, setProjectActive] = useState(1);
     const [block, setBlock] = useState(false);
@@ -25,7 +26,7 @@ const Projects: React.FC = () => {
     return(
        <div className={styles.containerProjects} ref={dataContext ? dataContext.projects : null} >
             <span className={styles.title}>
-                Mis proyectos
+                { projectsData.titulo }
             </span>
             <div className={styles.containerCarousel}>
                 <div className={styles.containerIcon} 
@@ -46,38 +47,43 @@ const Projects: React.FC = () => {
                     <div className={styles.carousel}>
                         <Project name='Chess 3D' 
                             demo 
-                            description={chessDescription} 
+                            description={projectsData.chessDescription} 
                             imgUrl='/Chess3D.png' 
                             demoUrl="https://chess3dloop.netlify.app/" 
                             refProject={projectRef} 
                             id='chess'
+                            ver={projectsData.ver}
                         />
                         <Project name='React Slides' 
                             demo 
-                            description={slidesDescription} 
+                            description={projectsData.slidesDescription} 
                             imgUrl='/reactSlides.png' 
                             demoUrl='https://react-slides-animation.netlify.app/'
                             id='slides'
+                            ver={projectsData.ver}
                         />
                         <Project name='Cricket Trajectory Viewer' 
                             demo={false} 
-                            description={cricketDescription} 
+                            description={projectsData.cricketDescription} 
                             imgUrl='/cricket.png' 
                             id='cricket'
+                            ver={projectsData.ver}
                         />
                         <Project name='Movies carousel'
                             demo
                             demoUrl="https://movies-carousel.vercel.app/"
-                            description={moviesDescription}
+                            description={projectsData.moviesDescription}
                             imgUrl="/movies.png"
                             id='movies'
+                            ver={projectsData.ver}
                         />
                         <Project name='Fast buy ecommerce'
                             demo
                             demoUrl="https://ecommerce-fast.vercel.app/"
-                            description={ecommerceDescription}
+                            description={projectsData.ecommerceDescription}
                             imgUrl="/ecommerce.png"
                             id='ecommerce'
+                            ver={projectsData.ver}
                         />
                     </div>
                 </div>

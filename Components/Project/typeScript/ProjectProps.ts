@@ -5,7 +5,8 @@ interface projectProps {
     demoUrl?: string,
     demo: boolean,
     refProject?: React.MutableRefObject<HTMLDivElement | null>,
-    id: string
+    id: string,
+    ver: string
 }
 
 export type {

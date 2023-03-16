@@ -4,9 +4,10 @@ import { DataContext } from "../Context";
 import { gsap } from "gsap";
 import { navigateScroll, navResponsive } from "./hooks";
 import { useCycle } from "framer-motion";
+import { head } from "../../lang/dataLang";
 import styles from '../../styles/Header.module.css';
 
-const Header: React.FC<{redirect: boolean}> = ({redirect}) => {
+const Header: React.FC<{redirect: boolean, headerData: head}> = ({redirect, headerData}) => {
     const line = useRef(null);
     const tl = gsap.timeline();
     const refsContext = useContext(DataContext);
@@ -127,7 +128,7 @@ const Header: React.FC<{redirect: boolean}> = ({redirect}) => {
                         Angel Developer
                     </span>
                 </div>
-                { navResponsive(headerActiveState, styles, line, containerSections, homeSection, aboutSection, projectsSection, redirect, refsContext, router, toggleOpen, isOpen) }
+                { navResponsive(headerActiveState, styles, line, containerSections, homeSection, aboutSection, projectsSection, redirect, refsContext, router, toggleOpen, isOpen, headerData) }
             </div>
         </div>
     );

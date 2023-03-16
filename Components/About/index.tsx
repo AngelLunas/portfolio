@@ -3,28 +3,24 @@ import SkillImg from "../Skill";
 import styles from '../../styles/About.module.css';
 import { motion } from "framer-motion";
 import { DataContext } from "../Context";
+import { aboutType } from "../../lang/dataLang";
 
-const About: React.FC = () => {
+const About: React.FC<{aboutData: aboutType}> = ({ aboutData }) => {
     const dataContext = useContext(DataContext);
     return (
         <div className={styles.containerAbout} ref={dataContext ? dataContext.about : null}>
             <div className={styles.textAbout}>
                 <div className={styles.containerTitle}>
                     <span className={styles.aboutTitle}>
-                        Acerca de mí 
+                        { aboutData.acerca }
                     </span>
                 </div>
                 <p className={styles.about}>
-                    Mi nombre es Ángel David Luna y soy desarrollador web front-end freelancer. 
-                    Vivo en Colombia y soy estudiante de ingeniería de sistemas en 
-                    la universidad Tecnológica de Pereira. He trabajado en múltiples proyectos
-                    como desarrollador web front-end con tecnologías JavaScript, en las cuales me desenvuelvo bien. 
-                    Desde que era niño estuve rodeado por tecnología, lo que creo en mí una pasión por el aprendizaje 
-                    tecnológico y posteriormente un amor por la programación.
+                    { aboutData.descripcion }
                 </p>
                 <div className={styles.containerSkills} >
                     <span className={styles.titleSkills} >
-                        Mis habilidades:
+                        { aboutData.habilidades }
                     </span>
                     <motion.div className={styles.imgsSkills} initial='offScreen' whileInView='onScreen' transition={{staggerChildren: .1}} >
                         <SkillImg imgUrl='/tsLogo.png' alt='TypeScript'/>

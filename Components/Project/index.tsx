@@ -6,7 +6,7 @@ import { projectProps } from './typeScript/ProjectProps';
 import { gsap } from 'gsap';
 import styles from '../../styles/Project.module.css';
 
-const Project: React.FC<projectProps> = ({description, imgUrl, name, demo, demoUrl, refProject, id}) => {
+const Project: React.FC<projectProps> = ({description, imgUrl, name, demo, demoUrl, refProject, id, ver}) => {
     const [onBtn, setOnBtn] = useState(false);
     const btnRef = useRef<HTMLButtonElement | null>(null);
     const tl = gsap.timeline();
@@ -37,7 +37,7 @@ const Project: React.FC<projectProps> = ({description, imgUrl, name, demo, demoU
                 <div className={styles.containerButtons}>
                     <Link href={`/proyecto/${id}`} className={styles.linkDemo} >
                         <button ref={btnRef} type='button' className={styles.btnDemo} onMouseEnter={() => setOnBtn(true)} onMouseLeave={() => setOnBtn(false)}>
-                            Ver más
+                            { ver }
                         </button>
                     </Link>
                     {demo ? 

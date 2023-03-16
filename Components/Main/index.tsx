@@ -4,6 +4,7 @@ import { navigateScroll } from "../Header/hooks";
 import { motion } from 'framer-motion';
 import styles from '../../styles/Main.module.css';
 import { DataContext } from "../Context";
+import { mainType } from "../../lang/dataLang";
 
 const title = {
     initial: {
@@ -51,7 +52,7 @@ const btnC = {
     }
 }
 
-const Main: React.FC = () => {
+const Main: React.FC<{mainData: mainType}> = ({mainData}) => {
     const [onBtn, setOnBtn] = useState(false);
     const btnProject = useRef<HTMLButtonElement>(null);
     const tl = gsap.timeline();
@@ -76,7 +77,7 @@ const Main: React.FC = () => {
         <div className={styles.mainContainer}>
             <div className={styles.containerTitle}>
                 <motion.h1 className={styles.title} variants={title} initial='initial' whileInView='onScreen'>
-                    Soy Ángel Luna y soy desarrollador web front-end
+                    { mainData.descripcion }
                 </motion.h1>
                 <div className={styles.containerButtons}>
                     <motion.button ref={btnProject} 
@@ -88,10 +89,10 @@ const Main: React.FC = () => {
                         initial='initial'
                         whileInView='onScreen'
                     >
-                        Mira mis proyectos
+                        { mainData.proyectos }
                     </motion.button>
                     <motion.button className={styles.btnContact} onClick={() => navigateScroll(dataContext, 'contact')} variants={btnC} initial='initial' whileInView='onScreen' >
-                        {'Contactame  >'}
+                        {`${mainData.contacto} >`}
                     </motion.button>
                 </div>
             </div>

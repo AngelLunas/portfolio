@@ -1,0 +1,49 @@
+{
+    "head": {
+        "inicio": "Home",
+        "acerca": "About me",
+        "proyectos": "Projects",
+        "contacto": "Contact"
+    },
+    "main": {
+        "descripcion": "My name is Ángel Luna and I'm full stack web developer",
+        "proyectos": "Look at my projects",
+        "contacto": "Contact me"
+    },
+    "about": {
+        "acerca": "About me",
+        "descripcion": "My name is Ángel David Luna and I'm a full stack freelance web developer. I live in Colombia and I'm majoring in computer science at Universidad tecnológica de Pereira. I have worked in multiple projects  as full stack web developer with JavaScript tecnologies which I'm good at. Since I was a child I was surrounded by technology, which created in me a passion for technological learning and later a love for programming.",
+        "habilidades": "My skills"
+    },
+    "projects": {
+        "titulo": "My projects",
+        "ver": "See more",
+        "chessDescription": "hess 3D is an online multiplayer 3D chess game. You can play from the web app with another random player, create a room to play with a friend, or join a private room. Chess is developed with React and Three js for the 3D scene, animations are made with gsap and I used React Three fiber. The backend for the multiplayer game is developed with Express, a Node Js framework and for the real-time connection between players I used Socket io. Chess 3D adapts to computers and mobiles due to its responsive design.",
+        "slidesDescription": "React Slides is an informative and visual slide-like website, each view of the site features animations. I developed this site with React, TypeScript, Webpack and Sass, the animations are done with gsap. Each view is part of a main carousel component. The site presents animations when entering a new view, moving to the next and returning to the previous one.",
+        "cricketDescription": "Website where you can view the trajectory of an animated cricket ball, there are 3 types of views and you can view the trajectory of multiple balls simultaneously or one after another. The data to animate the trajectory is interpreted from a json file. The site was developed with Three Js for the 3D scenery, Webpack as a packager and the camera animations are developed with gsap.",
+        "moviesDescription": "Website consisting of two carousels, where you can view information about the movies and filter from their release date, this website has been developed with React, it adapts perfectly to mobile devices",
+        "ecommerceDescription": "This website was developed with Next js, as part of a technical test, it has a carousel with products that can be divided into categories, a cart with an order summary where you can make the purchase and a panel to view my orders and their status. For administrators there is a section where you can see all orders and change their status. It adapts to all devices."
+    },
+    "contact": {
+        "titulo": "Contact me"
+    },
+    "footer": {
+        "inicio": "Home",
+        "proyectos": "Projects",
+        "acerca": "About me",
+        "contacto": "Contact",
+        "title": "Contact me: "
+    },
+    "projectPage": {
+        "title": "Description",
+        "tecnologias": "Technologies",
+        "repositorio": "Repository",
+        "repositorioBackend": "Backend repository",
+        "notFound": "Project not found",
+        "chessDescription": "Chess 3D is an online multiplayer 3D chess game. You can play from the web application with another random player, create a room to play with a friend or join a private room. Chess is developed with React and Three js for the 3D scene, animations are made with gsap and I used React Three fiber. The backend for the multiplayer game is developed with Express, a Node Js framework and for the real-time connection between players I used Socket io. Chess 3D adapts to computers and mobile phones due to its responsive design.",
+        "slidesDescription": "React Slides is an informative and visual slide-like website, each view of the site features animations. I developed this site with React, TypeScript, Webpack and Sass, the animations are done with gsap. Each view is part of a main carousel component. The site presents animations when entering a new view, moving to the next and returning to the previous one",
+        "cricketDescription": "Website where you can view the trajectory of an animated cricket ball, there are 3 types of views and you can view the trajectory of multiple balls simultaneously or one after another. The data to animate the trajectory is interpreted from a json file. The site was developed with Three Js for the 3D scenery, Webpack as a packager and the camera animations are developed with gsap.",
+        "moviesDescription": "Website consisting of two carousels, where you can view information about the movies and filter from their release date, this website has been developed with React, it adapts perfectly to mobile devices",
+        "ecommerceDescription": "This website was developed with Next js, as part of a technical test, it has a carousel with products that can be divided into categories, a cart with an order summary where you can make the purchase and a panel to view my orders and their status. For administrators there is a section where you can see all orders and change their status. It adapts to all devices."
+    }
+}

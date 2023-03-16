@@ -9,7 +9,9 @@ import WrapperContext from '../Components/Context';
 const Projects = dynamic(() => import('../Components/Projects'), { ssr: false });
 const Header = dynamic(() => import('../Components/Header'), { ssr: false });
 
-export default function Home() {
+export default function Home({data} : any) {
+  console.log(data);
+
   return (
     <>
       <Head>
@@ -20,14 +22,24 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <WrapperContext>
-          <Header redirect={false} />
-          <Main />
-          <About />
-          <Projects />
-          <Contact />
-          <Footer redirect={false} />
+          <Header redirect={false} headerData={data.head}/>
+          <Main mainData={data.main}/>
+          <About aboutData={data.about}/>
+          <Projects projectsData={data.projects}/>
+          <Contact contactData={data.contact}/>
+          <Footer redirect={false} footerData={data.footer}/>
         </WrapperContext>
       </main>
     </>
   )
+}
+
+export const getStaticProps = async ({ locale } : any) => {
+  const response = await import(`../lang/${locale}.json`);
+
+  return {
+    props: {
+      data: response.default
+    }
+  }
 }

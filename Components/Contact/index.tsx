@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from '../../styles/Contact.module.css';
 import { motion } from 'framer-motion';
 import { DataContext } from "../Context";
+import { contactType } from "../../lang/dataLang";
 
 const container = {
     initial: {
@@ -16,7 +17,7 @@ const container = {
     }
 }
 
-const Contact: React.FC = () => {
+const Contact: React.FC<{contactData: contactType}> = ({contactData}) => {
     const dataContext = useContext(DataContext);
 
     return(
@@ -24,7 +25,7 @@ const Contact: React.FC = () => {
             <motion.div className={styles.contact} variants={container} >
                 <div className={styles.contactContainer}>
                     <span className={styles.title}>
-                        Contáctame
+                        { contactData.titulo }
                     </span>
                     <div className={styles.containerData}>
                         <div className={styles.data}>

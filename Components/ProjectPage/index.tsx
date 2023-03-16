@@ -1,8 +1,17 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { ProjectData } from "../../TypeScript/ProjectData";
 import styles from '../../styles/ProjectPage.module.css';
+import { projectsType } from "../../lang/dataLang";
 
-const ProjectPage: React.FC<{projectData: ProjectData | null | undefined}> = ({projectData}) => {
+const ProjectPage: React.FC<{projectData: ProjectData | null | undefined, projects: projectsType}> = ({projectData, projects}) => {
+    const [description, setDescription] = useState('');
+
+    useEffect(() => {
+        if (projectData?.id) {
+            setDescription(projects[`${projectData.id}Description`]);
+        }
+    }, [projectData]);
+
     return (
         <>
         {projectData ? 
@@ -23,15 +32,15 @@ const ProjectPage: React.FC<{projectData: ProjectData | null | undefined}> = ({p
             <div className={styles.descriptionContainer}>
                 <div className={styles.dataDescription}>
                     <span className={styles.titleDes}>
-                        Descripción
+                        { projects.title }
                     </span>
                     <p className={styles.textDes} >
-                        {projectData.description}
+                        { description }
                     </p>
                 </div>
                 <div className={styles.tecContainers}>
                     <span className={styles.titleTec}>
-                        Tecnologías
+                        { projects.tecnologias }
                     </span>
                     <div className={styles.containerTec}>
                         {projectData.technologies.map((element, index) => {
@@ -55,14 +64,14 @@ const ProjectPage: React.FC<{projectData: ProjectData | null | undefined}> = ({p
                 { projectData.repoFront ?
                 <a href={projectData.repoFront}>
                     <button type="button" className={styles.btnRepoF}>
-                        Repositorio 
+                        { projects.repositorio } 
                     </button>
                 </a>
                 : null}
                 { projectData.repoBack ?
                 <a href={projectData.repoBack}>
                     <button type="button" className={styles.btnRepoB}>
-                        Repositorio Backend
+                        { projects.repositorioBackend }
                     </button>
                 </a>
                 : null}
@@ -71,7 +80,7 @@ const ProjectPage: React.FC<{projectData: ProjectData | null | undefined}> = ({p
         : 
         <div className={styles.notFound}>
             <span className={styles.textNot}>
-                El proyecto no existe
+                { projects.notFound }
             </span>
         </div>}
         </>
