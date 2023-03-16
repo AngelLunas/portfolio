@@ -3,7 +3,7 @@ import { ProjectData } from "../../TypeScript/ProjectData";
 import styles from '../../styles/ProjectPage.module.css';
 import { projectsType } from "../../lang/dataLang";
 
-const ProjectPage: React.FC<{projectData: ProjectData | null | undefined, projects: projectsType}> = ({projectData, projects}) => {
+const ProjectPage: React.FC<{projectData: ProjectData | null | undefined, projects: any}> = ({projectData, projects}) => {
     const [description, setDescription] = useState('');
 
     useEffect(() => {
