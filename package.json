@@ -1,6 +1,7 @@
 {
   "name": "portfolio-2",
   "version": "0.1.0",
+  "description": "Angel Luna's professional web developer portfolio built with Next.js and TypeScript",
   "private": true,
   "scripts": {
     "dev": "next dev",
