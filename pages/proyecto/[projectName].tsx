@@ -3,10 +3,10 @@ import Head from 'next/head'
 import dynamic from "next/dynamic";
 import { ProjectData } from "../../TypeScript/ProjectData";
 import { useRouter } from "next/router";
-import Footer from "../../Components/Footer";
+import Footer from "../../components/Footer";
 import { dataType, projectType } from "../../lang/dataLang";
-const Header = dynamic(() => import('../../Components/Header'), {ssr: false});
-const ProjectPage = dynamic(() => import('../../Components/ProjectPage'), {ssr: false});
+const Header = dynamic(() => import('../../components/Header'), {ssr: false});
+const ProjectPage = dynamic(() => import('../../components/ProjectPage'), {ssr: false});
 
 const projectsData: Array<ProjectData> = [
     {

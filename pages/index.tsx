@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
-import Main from '../Components/Main'
-import About from '../Components/About'
-import Contact from '../Components/Contact'
-import Footer from '../Components/Footer'
-import WrapperContext from '../Components/Context';
-const Projects = dynamic(() => import('../Components/Projects'), { ssr: false });
-const Header = dynamic(() => import('../Components/Header'), { ssr: false });
+import Main from '../components/Main'
+import About from '../components/About'
+import Contact from '../components/Contact'
+import Footer from '../components/Footer'
+import WrapperContext from '../components/Context';
+const Projects = dynamic(() => import('../components/Projects'), { ssr: false });
+const Header = dynamic(() => import('../components/Header'), { ssr: false });
 
 export default function Home({data} : any) {
   console.log(data);
