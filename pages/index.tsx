@@ -6,8 +6,8 @@ import About from '../Components/About'
 import Contact from '../Components/Contact'
 import Footer from '../Components/Footer'
 import WrapperContext from '../Components/Context';
-const Projects = dynamic(() => import('../components/Projects'), { ssr: false });
-const Header = dynamic(() => import('../components/Header'), { ssr: false });
+const Projects = dynamic(() => import('../Components/Projects'), { ssr: false });
+const Header = dynamic(() => import('../Components/Header'), { ssr: false });
 
 export default function Home({data} : any) {
   console.log(data);
