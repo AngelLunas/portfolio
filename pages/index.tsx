@@ -37,13 +37,9 @@ export default function Home({data} : any) {
 export const getStaticProps = async ({ locale } : any) => {
   const response = await import(`../lang/${locale}.json`);
 
-  // Generate SEO metadata from translations
-  const seoTitle = response.default.meta.seoTitle.trim();
-
   return {
     props: {
-      data: response.default,
-      seoTitle
+      data: response.default
     }
   }
 }
