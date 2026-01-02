@@ -109,11 +109,17 @@ const PageProject: React.FC<{data: dataType }> = ({data}) => {
     )
 }
 
-export const getServerSideProps = async ({locale}: any) => {
+export const getServerSideProps = async ({locale, params}: any) => {
     const response = await import(`../../lang/${locale}.json`);
+
+    // Get project metadata for SEO
+    const project = projectsData.find(p => p.id === params.projectName) as ProjectData;
+    const repoUrl = (project.repoBack as string).split('/').pop();
+
     return {
         props: {
-            data: response.default
+            data: response.default,
+            repoName: repoUrl
         }
     }
 }
