@@ -114,7 +114,7 @@ export const getServerSideProps = async ({locale, params}: any) => {
 
     // Get project metadata for SEO
     const project = projectsData.find(p => p.id === params.projectName) as ProjectData;
-    const repoUrl = (project.repoBack as string).split('/').pop();
+    const repoUrl = project && project.repoBack ? (project.repoBack as string).split('/').pop() : null;
 
     return {
         props: {
