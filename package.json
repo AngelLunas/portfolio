@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "browserslist@latest --update-db"
   },
   "engines": {
     "node": ">=24.x"
@@ -25,5 +26,9 @@
     "react-dom": "18.2.0",
     "react-player": "^2.11.0",
     "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "browserslist": "^4.22.1",
+    "caniuse-lite": "^1.0.30001550"
   }
 }
