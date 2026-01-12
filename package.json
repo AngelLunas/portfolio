@@ -10,7 +10,7 @@
     "postinstall": "npx browserslist@latest --update-db"
   },
   "engines": {
-    "node": ">=24.x"
+    "node": ">=18.x"
   },
   "dependencies": {
     "@next/font": "13.1.1",
