@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "browserslist@latest --update-db"
+    "postinstall": "npx browserslist@latest --update-db"
   },
   "engines": {
     "node": ">=24.x"
