@@ -9,9 +9,6 @@
     "lint": "next lint",
     "postinstall": "npx browserslist@latest --update-db"
   },
-  "engines": {
-    "node": "20.x"
-  },
   "dependencies": {
     "@next/font": "13.1.1",
     "@types/node": "18.11.18",
