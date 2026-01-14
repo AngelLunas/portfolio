@@ -5,10 +5,23 @@ import Main from '../Components/Main'
 import About from '../Components/About'
 import Contact from '../Components/Contact'
 import Footer from '../Components/Footer'
-import WrapperContext from '../Components/Context';
+import WrapperContext from '../Components/Context'
+import { getThemeColor } from '@utils/helpers';
+
+// Dynamic imports for better performance - these components are loaded on demand
 const Projects = dynamic(() => import('../Components/Projects'), { ssr: false });
 const Header = dynamic(() => import('../Components/Header'), { ssr: false });
 
+/**
+ * Home Page Component
+ * Main landing page that displays the portfolio sections including:
+ * - Header with navigation
+ * - Main hero section
+ * - About section
+ * - Projects showcase
+ * - Contact information
+ * - Footer
+ */
 export default function Home({data} : any) {
   console.log(data);
 
