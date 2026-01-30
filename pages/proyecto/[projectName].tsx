@@ -24,8 +24,7 @@ const projectsData: Array<ProjectData> = [
         demo: 'https://chess3dloop.netlify.app/',
         repoFront: 'https://github.com/AngelLunas/CHESS-3D',
         repoBack: 'https://github.com/AngelLunas/CHESS-3D-Backend',
-        createdAt: new Date('2023-06-15'),
-        getSlug: function() { return this.id.toLowerCase(); }
+        createdAt: '2023-06-15'
     },
     {
         id: 'slides',

@@ -6,8 +6,7 @@ interface ProjectData {
     demo: string | null,
     repoFront: string | null,
     repoBack: string | null,
-    createdAt?: Date,
-    getSlug?: () => string
+    createdAt?: string
 }
 
 export type {ProjectData};
