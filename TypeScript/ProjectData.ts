@@ -1,11 +1,13 @@
 interface ProjectData {
-    id: string, 
+    id: string,
     name: string,
-    videoUrl: string, 
+    videoUrl: string,
     technologies: Array<string>,
-    demo: string | null, 
-    repoFront: string | null, 
-    repoBack: string | null
+    demo: string | null,
+    repoFront: string | null,
+    repoBack: string | null,
+    createdAt?: Date,
+    getSlug?: () => string
 }
 
 export type {ProjectData};
