@@ -30,8 +30,8 @@ const Contact: React.FC<{contactData: contactType}> = ({contactData}) => {
                     <div className={styles.containerData}>
                         <div className={styles.data}>
                             <Image src='/iconCall.png' alt='icon call' width={30} height={30} className={styles.img} />
-                            <a href='https://api.whatsapp.com/send/?phone=573177148356' target='_blank' rel="noreferrer" className={styles.textData}>
-                                +57 3177148356
+                            <a href='https://api.whatsapp.com/send/?phone=573246423357' target='_blank' rel="noreferrer" className={styles.textData}>
+                                +57 3246423357
                             </a>
                         </div>
                         <div className={styles.data}>

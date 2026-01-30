@@ -55,8 +55,8 @@ const Footer: React.FC<{redirect: boolean, footerData: footerType}> = ({redirect
                         <div className={styles.rowsContainerContact}>
                             <div className={styles.rowContact}>
                                 <Image src='/callIcon.png' alt='icon call' width={20} height={20}/>
-                                <a className={styles.dataText} href='https://api.whatsapp.com/send/?phone=573177148356' target='_blank' rel="noreferrer" >
-                                    +57 3177148356
+                                <a className={styles.dataText} href='https://api.whatsapp.com/send/?phone=573246423357' target='_blank' rel="noreferrer" >
+                                    +57 3246423357
                                 </a>
                             </div>
                             <div className={styles.rowContact}>
