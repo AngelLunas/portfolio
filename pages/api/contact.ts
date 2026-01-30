@@ -10,12 +10,12 @@ export default async function handler(
 
     const { name, email, message, subject } = req.body;
 
-    if (!name || !email || !message || !subject) {
+    if (!name || !email || !message) {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
     // Format message for sending
-    const formattedSubject = subject.trim() || 'Contact from portfolio';
+    const formattedSubject = (subject && typeof subject === 'string') ? subject.trim() : 'Contact from portfolio';
     const formattedMessage = `
         New contact message:
 
